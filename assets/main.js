@@ -1,10 +1,10 @@
-// Indicate the current section without changing the browser's URL on scroll.
+// Keep the navigation in sync with the section in view without replacing the URL.
 const navigationLinks = [...document.querySelectorAll('.main-nav a[href^="#"]')];
 const sections = navigationLinks
   .map((link) => document.getElementById(link.hash.slice(1)))
   .filter(Boolean);
 
-if ('IntersectionObserver' in window) {
+if ('IntersectionObserver' in window && sections.length) {
   const visibleSections = new Map();
   const observer = new IntersectionObserver((entries) => {
     for (const entry of entries) visibleSections.set(entry.target.id, entry);
@@ -19,7 +19,7 @@ if ('IntersectionObserver' in window) {
         link.removeAttribute('aria-current');
       }
     }
-  }, { rootMargin: '-5% 0px -30% 0px', threshold: 0 });
+  }, { rootMargin: '-15% 0px -40% 0px', threshold: 0 });
 
   for (const section of sections) observer.observe(section);
 }

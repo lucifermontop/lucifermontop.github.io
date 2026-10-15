@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600" fill="none">
+  <defs>
+    <linearGradient id="blue" x1="-154" y1="-206" x2="166" y2="207" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9EAFFF"/>
+      <stop offset=".12" stop-color="#5376FF"/>
+      <stop offset=".32" stop-color="#244BFF"/>
+      <stop offset=".49" stop-color="#1633CB"/>
+      <stop offset=".64" stop-color="#244BFF"/>
+      <stop offset=".83" stop-color="#1738D4"/>
+      <stop offset="1" stop-color="#071B77"/>
+    </linearGradient>
+    <linearGradient id="blue-light" x1="-144" y1="-207" x2="142" y2="186" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E0E7FF" stop-opacity=".8"/>
+      <stop offset=".27" stop-color="#85A0FF" stop-opacity=".1"/>
+      <stop offset=".55" stop-color="#AEBFFF" stop-opacity=".46"/>
+      <stop offset="1" stop-color="#244BFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="lime" x1="-200" y1="-100" x2="192" y2="92" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A2AD49"/>
+      <stop offset=".19" stop-color="#E6F27B"/>
+      <stop offset=".39" stop-color="#F5F8C7"/>
+      <stop offset=".56" stop-color="#E6F27B"/>
+      <stop offset=".8" stop-color="#CAD864"/>
+      <stop offset="1" stop-color="#77812E"/>
+    </linearGradient>
+    <linearGradient id="lime-light" x1="-200" y1="-70" x2="180" y2="80" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FCFFE4" stop-opacity=".1"/>
+      <stop offset=".4" stop-color="#FCFFE4" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#FCFFE4" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="shadow">
+      <stop stop-color="#171916" stop-opacity=".22"/>
+      <stop offset=".56" stop-color="#171916" stop-opacity=".09"/>
+      <stop offset="1" stop-color="#171916" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="tube" x="-40%" y="-30%" width="180%" height="160%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="surface"/>
+      <feSpecularLighting in="surface" surfaceScale="11" specularConstant=".6" specularExponent="24" lighting-color="#E8EDFF" result="shine">
+        <feDistantLight azimuth="225" elevation="47"/>
+      </feSpecularLighting>
+      <feComposite in="shine" in2="SourceAlpha" operator="in" result="trimmed-shine"/>
+      <feBlend in="SourceGraphic" in2="trimmed-shine" mode="screen"/>
+    </filter>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <clipPath id="front-half">
+      <path d="M-230-300H0L100 300H-230Z"/>
+    </clipPath>
+    <g id="cobalt-loop">
+      <ellipse rx="150" ry="218" stroke="url(#blue)" stroke-width="66" filter="url(#tube)"/>
+      <ellipse cx="-4" cy="-5" rx="150" ry="218" stroke="url(#blue-light)" stroke-width="15" filter="url(#soft)"/>
+    </g>
+    <g id="lime-loop">
+      <ellipse rx="222" ry="86" stroke="url(#lime)" stroke-width="47" filter="url(#tube)"/>
+      <ellipse cx="-2" cy="-4" rx="222" ry="86" stroke="url(#lime-light)" stroke-width="9" filter="url(#soft)"/>
+    </g>
+  </defs>
+  <ellipse cx="299" cy="545" rx="211" ry="31" fill="url(#shadow)"/>
+  <g transform="translate(300 278) rotate(28)">
+    <use href="#cobalt-loop"/>
+  </g>
+  <g transform="translate(300 315) rotate(-25)">
+    <use href="#lime-loop"/>
+  </g>
+  <g transform="translate(300 278) rotate(28)">
+    <g clip-path="url(#front-half)">
+      <use href="#cobalt-loop"/>
+    </g>
+  </g>
+</svg>

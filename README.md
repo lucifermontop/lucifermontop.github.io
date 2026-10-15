@@ -1,4 +1,4 @@
-# my. — Projekt-Zuhause
+# my. — Kleine Tools. Großer Eigensinn.
 
 Eine eigenständige, statische Startseite für MyVPN, MyJellyfin und weitere Projekte.
 HTML, CSS und ein wenig optionales JavaScript, ohne Build-Schritt oder Framework.
@@ -24,8 +24,9 @@ Die Datei `.nojekyll` lässt GitHub die Dateien unverändert ausliefern.
 
 - Texte, Projekte und Navigation: `index.html`.
 - Farben, Layout und responsive Darstellung: `assets/style.css`.
-- Eigene Gestaltung: Salbeigrün für MyVPN, Flieder für MyJellyfin, die gemeinsame `my.`-Wortmarke.
-- Die Projektkarten zeigen bewusst **Projektseite folgt**. Sobald echte Projektseiten vorhanden sind, können sie verlinkt werden.
+- Gestaltung nach `Design.md` (Perk): Electric Lime, warme Pergamentflächen, eine ruhige Schriftfamilie, 28px-Kartenradien und ein dunkler Footer. Die gemeinsame `my.`-Wortmarke verbindet die Projekte.
+- Die Projektübersicht im Hero verlinkt direkt auf die beiden Projektkarten. Die Navigation markiert den sichtbaren Abschnitt. Ohne JavaScript bleibt die Seite vollständig nutzbar.
+- Die Projekte zeigen bewusst **Projektseite folgt**. Sobald echte Projektseiten vorhanden sind, können sie verlinkt werden.
 - MyVPN-Datenschutzseite: `MyVPN/privacy.html`, verlinkt im Datenschutzabschnitt
   der Startseite. Dies entspricht exakt der in der App hinterlegten URL
   `https://lucifermontop.github.io/MyVPN/privacy.html` (Groß-/Kleinschreibung beachten).
@@ -39,7 +40,7 @@ Die Datei `.nojekyll` lässt GitHub die Dateien unverändert ausliefern.
 
 ## Schrift & Assets
 
-Manrope wird lokal ausgeliefert. Die Lizenz liegt in `assets/fonts/OFL.txt`.
-Alle übrigen Grafiken sind eigene SVG- und CSS-Elemente. Es gibt keine externen
+Inter (die in der Designreferenz genannte Ersatzschrift für OTSono) wird lokal ausgeliefert; genutzt werden ausschließlich die Gewichte 400 und 500. Die Lizenz liegt in `assets/fonts/inter-OFL.txt`.
+Die monochromen Projektgrafiken sind eigene SVG-Elemente. Es gibt keine externen
 Schriftaufrufe, Analyse-Skripte, Cookies oder externen JavaScript-Abhängigkeiten.
 GitHub-Links werden erst bei einem Klick aufgerufen.
